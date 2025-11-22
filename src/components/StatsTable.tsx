@@ -438,7 +438,7 @@ function StatsTable({ pokemon }: { pokemon: Pokemon })
         return <></>
     }
     
-    function totalBase()
+    /*function totalBase()
     {
         let sum = 0;
         pokemon.stats.map(e => sum += e.base_stat);
@@ -455,7 +455,7 @@ function StatsTable({ pokemon }: { pokemon: Pokemon })
         let sum = 0;
         EVs.map(e => sum += e);
         return sum;
-    }
+    }*/
 }
 
 
