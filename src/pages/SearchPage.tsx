@@ -9,13 +9,12 @@ import { Link } from "react-router-dom";
 function SearchPage()
 {
     return (
-    <div>
+    <div className="column">
         <h1>Search</h1>
         <div className="gridBox">
             <SearchPanel></SearchPanel>
             <ComparePanel></ComparePanel>
         </div>
-        
     </div>
     );
 }
