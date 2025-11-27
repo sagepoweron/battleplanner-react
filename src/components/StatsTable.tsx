@@ -52,7 +52,7 @@ function StatsTable({ pokemon }: { pokemon: Pokemon })
     };
 
     return(
-        <div>
+        <div className="panel">
             <h1>{pokemon.name}</h1>
             <div className="row">
                 <div className="bar">
@@ -75,8 +75,8 @@ function StatsTable({ pokemon }: { pokemon: Pokemon })
             
             
 
-            <div className="table">
-            <div className="row header">
+            <div className="row">
+            <div className="column header">
                 <div className="cell"></div>
                 <div className="cell">HP</div>
                 {displayHeader(1)}
@@ -85,7 +85,7 @@ function StatsTable({ pokemon }: { pokemon: Pokemon })
                 {displayHeader(4)}
                 {displayHeader(5)}
             </div>
-            <div className="row">
+            <div className="column">
                 <div className="cell header">Base</div>
                 <div className="cell">{pokemon.stats[0].base_stat}</div>
                 <div className="cell">{pokemon.stats[1].base_stat}</div>
@@ -95,7 +95,7 @@ function StatsTable({ pokemon }: { pokemon: Pokemon })
                 <div className="cell">{pokemon.stats[5].base_stat}</div>
             </div>
 
-            <div className="row">
+            <div className="column">
                 <div className="cell header">IV</div>
                 <div className="cell">
                     <input type="number" min="0" max="31" value={IVs[0]} onChange={(e) => {
@@ -136,7 +136,7 @@ function StatsTable({ pokemon }: { pokemon: Pokemon })
             </div>
 
 
-            <div className="row">
+            <div className="column">
                 <div className="cell header">EV</div>
                 <div className="cell">
                     <input type="number" min="0" max="255" value={EVs[0]} onChange={(e) => {
@@ -176,7 +176,7 @@ function StatsTable({ pokemon }: { pokemon: Pokemon })
                 </div>
             </div>
 
-            <div className="row">
+            <div className="column">
                 <div className="cell header">Total</div>
                 <div className="cell">
                     <strong>{calculateHP()}</strong>

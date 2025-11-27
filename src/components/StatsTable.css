@@ -1,21 +1,7 @@
-.table
-{
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #ccc;
-    width: 600px;
-    padding: 4px;
-    margin-bottom: 100px;
-}
-
-.row
-{
-    display: flex;
-}
-
 .cell
 {
-    flex: 1;
+    height: 24px;
+    width: 80px;
     padding: 4px;
     text-align: center;
     border: 1px solid gray;

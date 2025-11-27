@@ -1,7 +1,6 @@
 body
 {
-    margin: 0;
-    padding: 0;
+    margin: 8px;
     text-align: center;
 }
 
@@ -41,6 +40,7 @@ ul
 {
     display: flex;
     flex-direction: row;
+    overflow-x: scroll;
 }
 .column
 {
@@ -53,6 +53,7 @@ ul
 {
     image-rendering: pixelated;
     -ms-interpolation-mode: nearest-neighbor;
+    width: 200px;
 }
 
 .gridBox
@@ -60,7 +61,7 @@ ul
     display: grid;
     grid-template-columns: 1fr;
     align-items: start;
-    justify-items: stretch;
+    justify-items: center;
 }
 @media (min-width: 800px)
 {
@@ -96,6 +97,22 @@ ul
 
 
 
+.panel
+{
+    width: 360px;
+    min-height: 400px;
+    margin: 8px;
+    border: 1px solid #444;
+    background-color: #efefef;
+}
+@media (min-width: 1000px)
+{
+    .panel
+    {
+        width: 480px;
+    }
+}
+
 .list
 {
     margin: 8px;
@@ -110,9 +127,12 @@ ul
     border: 1px solid #444;
 }
 
-.card
+.small
 {
     height: 32px;
+}
+.card
+{
     margin: 4px;
     padding: 4px;
     background-color: azure;
@@ -124,12 +144,19 @@ ul
     text-align: left;
 }
 
+.overflow
+{
+    overflow-x: scroll;
+}
+
+
 table
 {
     margin: 8px;
     padding: 8px;
     background-color: rgb(235, 235, 235);
     border: 1px solid #444;
+    border-collapse: separate;
     border-spacing: 0;
 }
 th
@@ -149,4 +176,21 @@ td
 tr:nth-child(even)
 {
     background-color: #f2f2f2
+}
+
+
+.chartContainer
+{
+    width: 300px;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+
+.controls
+{
+    margin: 8px;
+    padding: 8px;
+    background-color: lightgray;
+    border: 1px solid #444;
 }

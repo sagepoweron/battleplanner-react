@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { isNullOrUndef } from "chart.js/helpers";
 import StatsTable from "../components/StatsTable";
 import type { Pokemon } from "../types";
-import "./InfoPage.css";
 
 export default InfoPage;
 
