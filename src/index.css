@@ -1,3 +1,7 @@
+html
+{
+    min-width: 400px;
+}
 body
 {
     margin: 8px;
@@ -135,7 +139,7 @@ ul
 {
     margin: 4px;
     padding: 4px;
-    background-color: azure;
+    background-color:rgb(190, 255, 190);
     border: 1px solid black;
     border-radius: 8px;
     display: flex;
