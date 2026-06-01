@@ -13,7 +13,7 @@ function ComparePage()
     <div className="column">
         <h1>Compare</h1>
         <div className="gridBox">
-            <div>
+            <div className="panel">
                 <h2>Stats</h2>
                 <StatsList></StatsList>
             </div>
@@ -114,9 +114,10 @@ function StatsTable({ pokemonList }: { pokemonList: Pokemon[] })
     const lowestTotal = getLowestTotal();
 
     return(
+        <div className="overflow">
         <table>
             <thead>
-               <tr>
+                <tr>
                     <th>Name</th>
                     <th>HP</th>
                     <th>Attack</th>
@@ -144,8 +145,8 @@ function StatsTable({ pokemonList }: { pokemonList: Pokemon[] })
             </tbody>
             
         </table>
+        </div>
     );
-    
 }
 
 

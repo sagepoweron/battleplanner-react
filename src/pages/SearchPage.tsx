@@ -1,6 +1,5 @@
 export default SearchPage;
 import { useState, type Key } from "react";
-import "./SearchPage.css";
 import { getPokemon, getPokemonList } from "../services/api.ts";
 import ComparePanel from "../components/ComparePanel.tsx";
 import { useCompareContext } from "../contexts/CompareContext.tsx";
@@ -9,13 +8,12 @@ import { Link } from "react-router-dom";
 function SearchPage()
 {
     return (
-    <div>
+    <div className="column">
         <h1>Search</h1>
         <div className="gridBox">
             <SearchPanel></SearchPanel>
             <ComparePanel></ComparePanel>
         </div>
-        
     </div>
     );
 }
@@ -62,9 +60,9 @@ function SearchPanel()
     }
 
     return (
-        <div className="searchPanel">
+        <div className="panel">
             <h2>Search List</h2>
-            <div className="searchControls">
+            <div className="controls">
                 <form onSubmit={handleSearch}>
                     <label htmlFor="query">Name/Number: </label>
                     <input id="query" type="text" placeholder="Name/Number" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}></input>
@@ -137,9 +135,9 @@ function SearchCard({ name }: { name: string })
     }
     
     return(
-        <div className="card">
+        <div className="card small">
             <h4>{name}</h4>
-            <div className="row">
+            <div>
                 <Link to={page}>
                     <button>Info</button>
                 </Link>

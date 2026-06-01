@@ -1,6 +1,5 @@
 import type { Key } from "react";
 import { useCompareContext } from "../contexts/CompareContext";
-import "./ComparePanel.css";
 import { Link } from "react-router-dom";
 
 export default ComparePanel;
@@ -10,9 +9,10 @@ function ComparePanel()
     const {clearCompareList} = useCompareContext();
 
     return (
-        <div className="comparePanel">
+        <div className="panel">
             <h2>Compare List</h2>
-            <div className="compareControls">
+            <div className="controls">
+                
                 <button onClick={() => clearCompareList()}>Clear List &#128936;</button>
             </div>
             <CompareList></CompareList>
@@ -27,13 +27,13 @@ function CompareList()
     if (compareList.length === 0)
     {
         return (
-        <div className="list">No results.</div>
+        <div>No results.</div>
         );
     }
     else
     {
         return (
-        <div className="list">
+        <div className="row">
             {compareList.map((item: string, index: Key | null | undefined) => <CompareCard name={item} key = {index}></CompareCard>)}
         </div>
         );
@@ -53,14 +53,12 @@ function CompareCard({ name }: { name: string })
     }
 
     return(
-    <div className="card">
+    <div className="card column">
         <h4>{name}</h4>
-        <div className="row">
             <Link to={page}>
                 <button>Info</button>
             </Link>
             <button onClick={removeClicked}>Remove</button>
-        </div>
         
     </div>
     );

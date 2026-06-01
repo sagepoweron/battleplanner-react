@@ -5,6 +5,7 @@ import SearchPage from "./pages/SearchPage";
 import InfoPage from "./pages/InfoPage";
 import ComparePage from "./pages/ComparePage";
 import { CompareProvider } from "./contexts/CompareContext";
+import Footer from "./components/Footer";
 
 
 function App()
@@ -20,6 +21,7 @@ function App()
                 <Route path="/compare" element={<ComparePage></ComparePage>}></Route>
             </Routes>
         </main>
+        <Footer></Footer>
     </CompareProvider>
     
     
